@@ -1,0 +1,119 @@
+@import "./../../global.scss";
+
+.background-container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+.navbar {
+    background-color: $primary;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    box-shadow: 8px 11px 17px -9px rgba(0, 0, 0, 0.45);
+    -webkit-box-shadow: 8px 11px 17px -9px rgba(0, 0, 0, 0.45);
+    -moz-box-shadow: 8px 11px 17px -9px rgba(0, 0, 0, 0.45);
+
+    .nav-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        height: 80px;
+        max-width: 1500px;
+        padding: 6rem;
+        h2 {
+            margin: 0;
+            a {
+                color: $secondary !important;
+                font-weight: bold;
+            }
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            text-align: center;
+            margin-right: 2rem;
+            background-color: $primary;
+            margin-bottom: 0px;
+            .nav-item {
+                line-height: 40px;
+                margin-right: 1rem;
+
+                a {
+                    color: $secondary !important;
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .nav-cart {
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+            margin-top: 5px;
+        }
+
+        .nav-icon {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .nav-container {
+        justify-content: space-between !important;
+        padding: 2rem !important;
+        .nav-menu {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            border-top: 1pxsolid #fff;
+            position: absolute;
+            top: 80px;
+            left: -110%;
+            opacity: 1;
+            transition: all 0.5s ease;
+        }
+
+        .nav-menu.active {
+            left: 0px;
+            opacity: 1;
+            transition: all 0.5s ease;
+            z-index: 1;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .nav-cart {
+            margin-left: -45px;
+        }
+
+        .nav-icon {
+            display: block !important;
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+            margin-top: 10px;
+        }
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .nav-container {
+
+        .nav-cart {
+            margin-left: 0px;
+        }
+    }
+}

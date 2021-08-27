@@ -1,0 +1,101 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat");
+
+$primary: #000;
+$secondary: #fff;
+$tertiary: #ff7b47;
+$gray: #979797;
+$gray-ligth: #f0f0f0;
+
+html,
+body,
+buttons,
+input,
+textarea,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+span,
+div,
+a {
+    font-family: "Montserrat";
+}
+
+.content-section {
+    width: 100%;
+    padding: 0px 300px;
+    margin-top: 50px;
+}
+.title-1 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.6rem;
+}
+
+.title-2 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.4rem;
+}
+
+.title-3 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2.5rem;
+    span {
+        color: $tertiary;
+    }
+}
+.text-2 {
+    color: $gray;
+    font-size: 1.001rem;
+    span {
+        color: $tertiary;
+    }
+}
+.text-1 {
+    color: $tertiary;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    margin-bottom: 5px;
+}
+.text-3 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.btn-orange {
+    background: $tertiary;
+    border: none;
+    // margin-left: 20px;
+    width: 150px;
+    color: $secondary;
+    font-weight: bold;
+    height: 50px;
+}
+@media screen and (max-width: 1500px) {
+    .content-section {
+        width: 100%;
+        padding: 0px 100px;
+    }
+}
+@media screen and (max-width: 700px) {
+    .content-section {
+        width: 100%;
+        padding: 0px 20px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .title-3 {
+        font-size: 2.2rem;
+        text-align: center;
+    }
+
+    .text-1,.text-2,.text-3 {
+        text-align: center;
+    }
+}

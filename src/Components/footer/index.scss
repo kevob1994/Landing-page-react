@@ -1,0 +1,97 @@
+@import "./../../global.scss";
+
+.footer {
+    display: block !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 9rem;
+    background: $primary;
+    padding-top: 50px !important;
+    padding-bottom: 50px !important;
+    .footer-content {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        h2 {
+            color: $secondary;
+            font-weight: bold;
+            font-size: 2rem;
+        }
+        ul {
+            display: flex;
+            align-items: center;
+            li {
+                margin-left: 50px;
+                a {
+                    color: $secondary;
+                }
+            }
+        }
+        .text-2 {
+            flex: 1;
+        }
+
+        .content-icons {
+            flex: 1;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            .icons {
+                color: $secondary;
+                font-size: 2rem;
+                margin-left: 10px;
+            }
+        }
+
+        .text-copyright {
+            color: $gray;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .footer {
+        .footer-content {
+            flex-direction: column;
+            ul {
+                padding: 0px;
+                li {
+                    margin-right: 50px;
+                    margin-left: 0px;
+                }
+            }
+            .text-2 {
+                text-align: left;
+            }
+            .content-icons {
+                justify-content: center;
+            }
+            .text-copyright {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .footer {
+        .footer-content {
+            margin-bottom: 30px;
+            ul {
+                display: block;
+                li {
+                    text-align: center;
+                    margin: 0px;
+                    margin-bottom: 20px;
+                }
+            }
+            .text-2 {
+                text-align: center;
+            }
+            h2 {
+                text-align: center;
+            }
+        }
+    }
+}
